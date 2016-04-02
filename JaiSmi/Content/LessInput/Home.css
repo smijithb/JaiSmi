@@ -1,0 +1,89 @@
+﻿/* Fonts */
+@font-face {
+  font-family: fabfeltscript-bold;
+  src: url('../fonts/FabfeltScript/fabfeltscript-bold.eot'), url('../fonts/FabfeltScript/fabfeltscript-bold.ttf') format('truetype'), url('../fonts/FabfeltScript/fabfeltscript-bold.woff');
+}
+@font-face {
+  font-family: variane_script;
+  src: url('../fonts/variane_script.ttf') format('truetype');
+}
+.home-description {
+  line-height: 25px;
+  padding-top: 25px;
+}
+.home-description .home-description-content {
+  font-family: fabfeltscript-bold;
+  font-size: 20px;
+  line-height: 25px;
+  background: #F39643;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 3px 2px 0.3;
+  behavior: url("/Scripts/Compatibility/PIE.htc");
+  padding: 20px;
+  float: none;
+  margin: 0 auto;
+}
+.home-content-wrapper .row {
+  margin-top: 25px;
+}
+.home-content-wrapper .row:first-child {
+  margin-top: 0;
+}
+.home-content-wrapper .home-tile-container {
+  position: relative;
+}
+.home-content-wrapper .home-tile-container .home-tile {
+  position: relative;
+  height: 400px;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 3px 2px 0.3;
+  behavior: url("/Scripts/Compatibility/PIE.htc");
+}
+.home-content-wrapper .home-tile-container .home-tile .home-tile-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  font-size: 16px;
+  background: #000000;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=calc(@value * 100))";
+  /*filter: alpha(opacity=calc(@value * 100));*/
+}
+.home-content-wrapper .home-tile-container .travel-tile {
+  background: url('/Images/Shared/travel_cover.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.home-content-wrapper .home-tile-container .about-me-tile {
+  background: url('/Images/Shared/profile_picture.jpg') no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  behavior: url("/Scripts/Compatibility/PIE.htc");
+  z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .home-content-wrapper .home-tile-container .about-me-tile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    behavior: url("/Scripts/Compatibility/PIE.htc");
+  }
+}
+.home-content-wrapper .home-tile-container .photos-tile {
+  background: url('/Images/Shared/photo_gallery_cover_bird_flight.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.home-content-wrapper .home-tile-container .kids-tile {
+  background: url('/Images/Shared/kids_cover_circus.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.home-content-wrapper .home-tile-container:first-child {
+  padding-left: 0;
+}
+.home-content-wrapper .home-tile-container:last-child {
+  padding-right: 0;
+}
+/*# sourceMappingURL=Home.css.map */

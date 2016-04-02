@@ -1,0 +1,19 @@
+﻿/**** Do variable declarations here ****/
+/* Fonts */
+@font-face {
+  font-family: fabfeltscript-bold;
+  src: url('../fonts/FabfeltScript/fabfeltscript-bold.eot'), url('../fonts/FabfeltScript/fabfeltscript-bold.ttf') format('truetype'), url('../fonts/FabfeltScript/fabfeltscript-bold.woff');
+}
+@font-face {
+  font-family: variane_script;
+  src: url('../fonts/variane_script.ttf') format('truetype');
+}
+/* Media queries breakpoints */
+/**** Compatibility style settings ****/
+.behavior {
+  behavior: url("/Scripts/Compatibility/PIE.htc");
+}
+.antialias-font-smoothing {
+  -webkit-font-smoothing: antialiased;
+}
+/*# sourceMappingURL=Util.css.map */

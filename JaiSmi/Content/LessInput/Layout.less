@@ -1,0 +1,111 @@
+﻿@import (reference) "Util.less";
+
+.body-text{
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4em;
+    color: @color-white;
+    .antialias-font-smoothing;
+    .link, a {
+        color: @link-color;
+        cursor: pointer;
+        &:hover {
+            cursor:pointer;
+            text-decoration:underline;
+        }
+    }
+}
+
+body {
+    .body-text;
+    margin: 0;
+    //background: url(@body-background-img) repeat;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.header{
+    background-color: @header-background;
+    width: 100%;
+    height: 80px;
+    .box-shadow(0, 1px, 3px, 0.1);
+    .header-links-wrapper {
+        width: 100%;
+        vertical-align: bottom;
+        text-align: center;
+        ul {
+            margin: 0 auto;
+            padding: 0;
+            display: inline-block;
+            li {
+                padding: 25px 0 22px 0;
+                margin-right: 30px;
+                list-style: none;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 30px;
+                cursor: pointer;
+                a {
+                    color: @color-white;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &:hover {
+                    border-bottom: 3px solid @color-white;
+                }
+                &:last-child {
+                    margin-right: 30px;
+                    @media screen and (max-width: @screen-xs-max) {
+                        margin-right: 0;
+                    }
+                }
+                @media screen and (max-width: @screen-xs-max) {
+                    margin-right: 0;
+                    padding: 25px 5px;
+                    display: block;
+                }
+
+            }
+            li.link-selected {
+                border-bottom: 3px solid @color-white;
+            }
+        }
+    }
+    @media screen and (max-width: @screen-xs-max) {
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.content-wrapper {
+    padding: 30px 50px;
+    @media screen and (max-width: @screen-xs-max) {
+        padding: 0 15px 25px;
+        margin-left: 100px; // Same as that of the header.
+    }
+}
+
+.footer {
+    background-color: @header-background;
+    width: 100%;
+    height: 70px;
+    display: table;
+    /*position: absolute;
+    bottom: 0;*/
+    .box-shadow(0, -1px, 3px, 0.1);
+    .copyright {
+        color: #808080;
+        font-size: 12px;
+        display: table-cell;
+        vertical-align: bottom;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}

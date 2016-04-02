@@ -1,0 +1,85 @@
+﻿@import (reference) "Util.less";
+
+/* Fonts */
+@font-face {
+	font-family: fabfeltscript-bold;
+	src: url('../fonts/FabfeltScript/fabfeltscript-bold.eot'), url('../fonts/FabfeltScript/fabfeltscript-bold.ttf') format('truetype'), url('../fonts/FabfeltScript/fabfeltscript-bold.woff');
+}
+
+@font-face {
+	font-family: variane_script;
+	src: url('../fonts/variane_script.ttf') format('truetype');
+}
+
+.home-description {
+        line-height: 25px;
+        padding-top: 25px;
+        .home-description-content {
+            font-family: fabfeltscript-bold;
+            font-size: 20px;
+            line-height: 25px;
+            background: #F39643;// #CF5B44;
+            .box-shadow(1px, 1px, 3px, 2px, 0.3);
+            padding: 20px;
+            float: none;
+            margin: 0 auto;
+        }
+    }
+.home-content-wrapper {
+    .row {
+        margin-top: 25px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    
+    .home-tile-container {
+        position: relative;
+        .home-tile {
+            position:relative;
+            height: 400px;
+            .box-shadow(1px, 1px, 3px, 2px, 0.3);
+            .home-tile-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 15px;
+                font-size: 16px;
+                background: @color-black;
+                .opacity(0.7);
+            }
+        }
+        .travel-tile {
+            background: url('/Images/Shared/travel_cover.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+        .about-me-tile {
+            background: url('/Images/Shared/profile_picture.jpg') no-repeat;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            .border-radius(200px);
+            z-index: 2;
+            @media screen and (max-width: @screen-xs-max) {
+                width: 100px;
+                height: 100px;
+                .border-radius(100px);
+            }
+        }
+        .photos-tile {
+            background: url('/Images/Shared/photo_gallery_cover_bird_flight.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+        .kids-tile {
+            background: url('/Images/Shared/kids_cover_circus.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

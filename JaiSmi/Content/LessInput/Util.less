@@ -1,0 +1,65 @@
+﻿/**** Do variable declarations here ****/
+
+/* Fonts */
+@font-face {
+	font-family: fabfeltscript-bold;
+	src: url('../fonts/FabfeltScript/fabfeltscript-bold.eot'), url('../fonts/FabfeltScript/fabfeltscript-bold.ttf') format('truetype'), url('../fonts/FabfeltScript/fabfeltscript-bold.woff');
+}
+
+@font-face {
+	font-family: variane_script;
+	src: url('../fonts/variane_script.ttf') format('truetype');
+}
+
+/* Media queries breakpoints */
+@screen-xs-max: 767px;
+@screen-sm-min: 768px;
+@screen-sm-max: 991px;
+@screen-md-min: 992px;
+@screen-md-max: 1199px;
+@screen-lg-min: 1200px;
+
+@link-color: #2585C5;
+@color-white: #ffffff;
+@color-black: #000000;
+@header-background: #242D34;// #b4d6e1;
+@body-background-img: '/Images/Shared/grass_190x190.jpg';
+
+
+/**** Compatibility style settings ****/
+
+.behavior {
+    behavior: url("/Scripts/Compatibility/PIE.htc");
+}
+
+.antialias-font-smoothing {
+    -webkit-font-smoothing:antialiased;
+}
+
+.border-radius (@radius) {
+    border-radius: @radius;
+    .behavior;
+}
+
+.box-shadow (@x: 0, @y: 3px, @blur-radius: 5px, @alpha: 0.5) {
+   .box-shadow-custom(@x @y @blur-radius rgba(0, 0, 0, @alpha));
+}
+
+.box-shadow (@x: 0, @y: 3px, @blur-radius: 5px, @spread: 0, @alpha: 0.5) {
+   .box-shadow-custom(@x @y @blur-radius @spread rgba(0, 0, 0, @alpha));
+}
+
+.box-shadow (@x: 0, @y: 3px, @blur-radius: 5px, @spread: 0, @color: #000) {
+   .box-shadow-custom(@x @y @blur-radius @spread @color);
+}
+
+.box-shadow-custom (@string) {
+     box-shadow: @string;
+    .behavior;
+}
+
+.opacity(@value){
+    opacity: @value;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=calc(@value * 100))"; // ie8
+    /*filter: alpha(opacity=calc(@value * 100));*/
+}
