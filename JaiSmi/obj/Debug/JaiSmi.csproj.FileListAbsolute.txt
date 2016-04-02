@@ -22,3 +22,4 @@ F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Web.Optimization.dll
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\WebGrease.dll
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\Antlr3.Runtime.pdb
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Web.Optimization.xml
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.csprojResolveAssemblyReference.cache

@@ -135,6 +135,7 @@
     <Content Include="Scripts\ScriptsLib\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\Compatibility\PIE.htc" />
     <Content Include="Scripts\Compatibility\PIE_uncompressed.htc" />
+    <Content Include="Scripts\ScriptsLib\isotope\isotope_2.2.2.pkgd.min.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery-2.2.1.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery-2.2.1.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -166,6 +167,7 @@
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.validate.unobtrusive.min.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\Shared\Shared.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
