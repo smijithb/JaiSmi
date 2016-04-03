@@ -14,12 +14,21 @@ namespace JaiSmi
 
             // jQuery
             bundles.Add(new ScriptBundle("~/bundles/jQuery").Include("~/Scripts/ScriptsLib/jQuery/jquery-2.2.1.min.js"));
+
+            // Namespace
+            bundles.Add(new ScriptBundle("~/bundles/namespace").Include("~/Scripts/ScriptsLib/namespace/Namespace.js"));
             
             // Bootstrap
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/ScriptsLib/bootstrap/bootstrap.min.js"));
 
             // Isotope
-            bundles.Add(new ScriptBundle("~/bundles/isotope").Include("~/Scripts/ScriptsLib/bootstrap/isotope_2.2.2.pkgd.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/isotope").Include("~/Scripts/ScriptsLib/isotope/isotope_2.2.2.pkgd.min.js", "~/Scripts/ScriptsLib/isotope/imagesloaded.pkgd.min.js"));
+
+            // Shared
+            bundles.Add(new ScriptBundle("~/bundles/shared").Include("~/Scripts/Shared/Shared.js"));
+
+            // Home
+            bundles.Add(new ScriptBundle("~/bundles/home").Include("~/Scripts/Home/Home.js"));
 
             #endregion
 

@@ -43,6 +43,10 @@
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Forloop.HtmlHelpers, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Forloop.HtmlHelpers.1.2.0.0\lib\net45\Forloop.HtmlHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -122,11 +126,14 @@
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Shared\athirapally_cover.jpg" />
+    <Content Include="Images\Shared\delhi_srinagar_cover.jpg" />
     <Content Include="Images\Shared\grass_190x190.jpg" />
     <Content Include="Images\Shared\kids_cover.jpg" />
     <Content Include="Images\Shared\kids_cover_circus.jpg" />
     <Content Include="Images\Shared\photo_gallery_cover_bird.jpg" />
     <Content Include="Images\Shared\photo_gallery_cover_bird_flight.jpg" />
+    <Content Include="Images\Shared\pichavaram_cover.jpg" />
     <Content Include="Images\Shared\travel_cover.jpg" />
     <Content Include="Images\Shared\photo_gallery_cover.jpg" />
     <Content Include="Images\Shared\profile_picture.jpg" />
@@ -135,6 +142,9 @@
     <Content Include="Scripts\ScriptsLib\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\Compatibility\PIE.htc" />
     <Content Include="Scripts\Compatibility\PIE_uncompressed.htc" />
+    <Content Include="Scripts\ScriptsLib\isotope\imagesloaded.pkgd.js" />
+    <Content Include="Scripts\ScriptsLib\isotope\imagesloaded.pkgd.min.js" />
+    <Content Include="Scripts\ScriptsLib\isotope\isotope_2.2.2.pkgd.js" />
     <Content Include="Scripts\ScriptsLib\isotope\isotope_2.2.2.pkgd.min.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery-2.2.1.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery-2.2.1.min.js" />
@@ -159,6 +169,13 @@
     <Content Include="Content\fonts\FabfeltScript\fabfeltscript-bold.ttf" />
     <Content Include="Content\fonts\FabfeltScript\fabfeltscript-bold.woff" />
     <Content Include="Content\fonts\FabfeltScript\fabfeltscript-bold.woff2" />
+    <Content Include="Scripts\ScriptsLib\isotope\imagesloaded.pkgd.min.js.map">
+      <DependentUpon>imagesloaded.pkgd.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ScriptsLib\isotope\isotope_2.2.2.pkgd.min.js.map">
+      <DependentUpon>isotope_2.2.2.pkgd.min.js</DependentUpon>
+    </Content>
+    <Content Include="App_Data\SJ.db" />
     <None Include="Scripts\ScriptsLib\jQuery\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.unobtrusive-ajax.min.js" />
@@ -167,6 +184,8 @@
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.validate.unobtrusive.min.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\Home\Home.js" />
+    <Content Include="Scripts\ScriptsLib\namespace\Namespace.js" />
     <Content Include="Scripts\Shared\Shared.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -199,7 +218,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\LessOutput\" />
     <Folder Include="Models\" />
   </ItemGroup>

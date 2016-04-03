@@ -22,7 +22,9 @@
 @link-color: #2585C5;
 @color-white: #ffffff;
 @color-black: #000000;
-@header-background: #242D34;// #b4d6e1;
+@color-dark-grey: #333333;
+@color-dark-blue: #242D34;
+@header-background: @color-dark-blue;// #b4d6e1;
 @body-background-img: '/Images/Shared/grass_190x190.jpg';
 
 
@@ -62,4 +64,26 @@
     opacity: @value;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=calc(@value * 100))"; // ie8
     /*filter: alpha(opacity=calc(@value * 100));*/
+}
+
+.word-wrap(@value){
+    -ms-word-wrap: @value;
+    word-wrap: @value;
+}
+
+/* Font sizes */
+.f30 {
+    font-size: 30px;
+}
+
+.f26 {
+    font-size: 26px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f20 {
+    font-size: 20px;
 }

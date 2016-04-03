@@ -5,4 +5,7 @@
 /// <reference path="scriptslib/jquery/jquery-2.2.1.min.js" />
 /// <reference path="scriptslib/bootstrap/bootstrap.min.js" />
 /// <reference path="scriptslib/isotope/isotope_2.2.2.pkgd.min.js" />
+/// <reference path="home/home.js" />
 /// <reference path="shared/shared.js" />
+/// <reference path="scriptslib/namespace/namespace.js" />
+/// <reference path="scriptslib/isotope/imagesloaded.pkgd.min.js" />

@@ -16,4 +16,17 @@
 .antialias-font-smoothing {
   -webkit-font-smoothing: antialiased;
 }
+/* Font sizes */
+.f30 {
+  font-size: 30px;
+}
+.f26 {
+  font-size: 26px;
+}
+.f24 {
+  font-size: 24px;
+}
+.f20 {
+  font-size: 20px;
+}
 /*# sourceMappingURL=Util.css.map */

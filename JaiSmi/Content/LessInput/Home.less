@@ -13,10 +13,10 @@
 
 .home-description {
         line-height: 25px;
-        padding-top: 25px;
         .home-description-content {
             font-family: fabfeltscript-bold;
             font-size: 20px;
+            color: @color-white;
             line-height: 25px;
             background: #F39643;// #CF5B44;
             .box-shadow(1px, 1px, 3px, 2px, 0.3);
@@ -28,17 +28,74 @@
 .home-content-wrapper {
     .row {
         margin-top: 25px;
+
         &:first-child {
             margin-top: 0;
         }
     }
-    
+
+    .activity-wrapper {
+        padding: 20px;
+
+        .activity-wrapper-title {
+            padding: 15px;
+            background: @color-dark-blue;
+            color: @color-white;
+            .box-shadow(1px, 1px, 3px, 2px, 0.3);
+            margin-bottom: 20px;
+            .f26;
+        }
+
+        .activity-grid {
+            .activity-item {
+                font-family: variane_script;
+                display: inline-block;
+                margin-bottom: 10px;
+                .box-shadow(1px, 1px, 3px, 2px, 0.3);
+
+                .activity-cover-container {
+                    padding: 10px;
+
+                    .activity-cover {
+                        max-width: 200px;
+                        max-height: 400px;
+                    }
+                }
+
+                .activity-title {
+                    .f24;
+                    line-height: 34px;
+                    text-align: center;
+                    padding: 0 10px;
+                }
+
+                .activity-desc {
+                    .f20;
+                    line-height: 24px;
+                    padding: 0 10px;
+                    width: 200px;
+                    .word-wrap(break-word);
+                }
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+            padding: 20px 0;
+        }
+    }
+
     .home-tile-container {
         position: relative;
+
+        .about-me-description {
+            margin: 10px 0;
+        }
+
         .home-tile {
-            position:relative;
+            position: relative;
             height: 400px;
             .box-shadow(1px, 1px, 3px, 2px, 0.3);
+
             .home-tile-title {
                 position: absolute;
                 bottom: 0;
@@ -49,10 +106,12 @@
                 .opacity(0.7);
             }
         }
+
         .travel-tile {
             background: url('/Images/Shared/travel_cover.jpg') no-repeat;
             background-size: 100% 100%;
         }
+
         .about-me-tile {
             background: url('/Images/Shared/profile_picture.jpg') no-repeat;
             background-size: 100% 100%;
@@ -61,23 +120,28 @@
             height: 200px;
             .border-radius(200px);
             z-index: 2;
+
             @media screen and (max-width: @screen-xs-max) {
                 width: 100px;
                 height: 100px;
                 .border-radius(100px);
             }
         }
+
         .photos-tile {
             background: url('/Images/Shared/photo_gallery_cover_bird_flight.jpg') no-repeat;
             background-size: 100% 100%;
         }
+
         .kids-tile {
             background: url('/Images/Shared/kids_cover_circus.jpg') no-repeat;
             background-size: 100% 100%;
         }
+
         &:first-child {
             padding-left: 0;
         }
+
         &:last-child {
             padding-right: 0;
         }

@@ -17,6 +17,8 @@
         @{Html.RenderPartial("~/Views/Shared/Footer.cshtml");}
     </div>
 
-    @Scripts.Render("~/bundles/jQuery", "~/bundles/bootstrap", "~/bundles/isotope")
+    @Scripts.Render("~/bundles/jQuery", "~/bundles/namespace", "~/bundles/bootstrap", "~/bundles/isotope", "~/bundles/shared")
+    @RenderSection("Scripts", false)
+    @Html.RenderScripts()
 </body>
 </html>
