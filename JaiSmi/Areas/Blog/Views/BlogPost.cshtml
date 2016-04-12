@@ -1,0 +1,42 @@
+﻿@model JaiSmi.Areas.Blog.Models.BlogPostDetailsModel
+
+@{
+    ViewBag.Title = string.Format("Blog: {0}", Model.BlogPostModel.Title);
+}
+
+@Styles.Render("~/content/blog")
+
+<div class="blog-post-wrapper">
+    <div class="container blog-post-container" data-blog-id="@Model.BlogPostModel.Id">
+        <div class="row post-title-row">
+            <h2 id="divPostTitle" class="post-title">@Model.BlogPostModel.Title</h2>
+            <span class="glyphicon glyphicon-edit edit-icon"></span>
+        </div>
+        <div class="row">
+            <div id="divPostContent" class="post-content">
+                @Html.Raw(Model.BlogPostModel.Content)
+            </div>
+        </div>
+        <div class="row post-btns-container nodisplay">
+            <div class="post-btns">
+                <input id="btnSavePost" type="button" class="btn btn-primary btn-post-save" value="Save" />
+                <input id="btnCancelPost" type="button" class="btn btn-secondary btn-post-cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginScriptContext())
+{
+    var scripts = BundleResolver.Current.GetBundleContents("~/bundles/ckeditor").ToArray();
+    
+    for (int i = scripts.Count() - 1; i >= 0; i--)
+    {
+        Html.AddScriptFile(scripts[i], true);
+    }
+    
+    foreach (var script in BundleResolver.Current.GetBundleContents("~/bundles/blog"))
+    {
+        Html.AddScriptFile(script, true);
+    }
+}

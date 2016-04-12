@@ -1,0 +1,53 @@
+﻿@import (reference) "../../../../Content/LessInput/Util.less";
+
+@font-face {
+	font-family: variane_script;
+	src: url('/Content/fonts/variane_script.ttf') format('truetype');
+}
+
+.blog-content-wrapper {
+    
+}
+
+.blog-post-wrapper {
+    .blog-post-container {
+        width: 75%;
+        .box-shadow(1px, 1px, 3px, 2px, 0.3);
+        padding: 0 35px 20px 35px;
+        .post-title-row {
+            text-align: center;
+        }
+        .post-title {
+            text-align: center;
+            margin: 20px auto;
+            display: inline-block;
+        }
+        .post-content {
+        }
+        @media screen and (max-width: @screen-xs-max) {
+            width: 90%;
+        }
+    }
+}
+
+.edit-icon {
+    font-size: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.post-btns-container {
+    text-align: center;
+    margin-top: 20px;
+    .post-btns {
+        display: inline-block;
+        margin: 0 auto;
+        .btn-post-save {
+            width: 100px;
+            margin-right: 10px;
+        }
+        .btn-post-cancel {
+            width: 100px;
+        }
+    }
+}

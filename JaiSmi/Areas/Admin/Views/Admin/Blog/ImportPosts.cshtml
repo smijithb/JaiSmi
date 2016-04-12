@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Imports blog posts from blogspot";
+}
+
+@Styles.Render("~/content/admin")
+
+<div class="admin-content-wrapper">
+    <div class="container">
+        <h2 class="page-title">Import blog posts</h2>
+        <div class="row">
+            @using (Html.BeginForm("Insert", "Blog", new { area = "Admin" }, FormMethod.Get)) {
+                <input type="submit" value="Import" class = "btn btn-primary btn-import-blog" />
+                @*@Html.ActionLink("Import", "Insert", "Blog", new { area = "Admin" }, new { @class = "btn btn-primary btn-import-blog" })*@
+            }
+        </div>
+    </div>
+</div>

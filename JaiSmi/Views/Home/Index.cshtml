@@ -1,10 +1,9 @@
 ﻿@using System.Web.Optimization;
+@using JaiSmi.Models;
 
-@{
-    Layout = "~/Views/_Layout.cshtml";
-}
+@Styles.Render("~/content/home")
 
-@Styles.Render("~/Content/home")
+@model HomeModel
 
 <div class="home-content-wrapper">
     <div class="container">
@@ -59,51 +58,11 @@
         </div>
 
         <div class="activity-wrapper row">
-            <div class="activity-wrapper-title">Blogs</div>
+            <div class="activity-wrapper-title">Blog</div>
             <div class="activity-grid">
-                <div class="activity-item">
-                    <p class="activity-title">The bossy kid</p>
-                    <p class="activity-desc">I had a horrible afternoon yesterday. Well the forenoon went in usual pace, but afternoon appeared to move like snail. Wonder why I wish so bad to get back home and cuddle up with my near ones! Is it just because a kinder garden principal has used the word domination?  Or is it because I have seen it in exaggerated terms?</p>
-                </div>
-                <div class="activity-item">
-                    <p class="activity-title">The three poignant words</p>
-                    <p class="activity-desc">At about 20:00hrs, the sudden realization of hunger made me rush to kitchen to grab something to eat. Very soon I recollected that I have sent my maid home and hence I have to cook dinner myself. The guilt of ideally sitting and wasting time in one side and the craving on the other side, made me storm into action. By God’s grace, my little ones had enough cookies to their desire and hence were ready to wait for more than an hour for dinner. After fifteen to twenty minutes, my two year old peeped into the kitchen.</p>
-                </div>
-                <div class="activity-item">
-                    <p class="activity-title">Bye Bye 2014</p>
-                    <p class="activity-desc">Yes, it indeed was a great year. As usual it started with b'day celebrations, festivals and lots of fun. The mid of the year remained saturated with happiness and some value additions to family viz. a bull and a retreat. The year winded up with certain financial loses and hectic work schedules.</p>
-                </div>
-                <div class="activity-item">
-                    <p class="activity-title">A weekend thought</p>
-                    <p class="activity-desc">Sitting in my favourite couch and having a cup of coffee with a book in the other hand is one of the best relaxing postures I used to have during the week ends. This was a way to clear off the previous week tensions and gearing up the strength to manage the new ones. This week somehow my thoughts drifted to my school days. As I was thinking my elder one whom we adorably call as Ammuz stormed into the room with a couple of complaints about her little sister.</p>
-                </div>
-                <div class="activity-item">
-                    <p class="activity-title">The Iron Chariot</p>
-                    <p class="activity-desc">I walked up to this organization for the first time, eleven years back. My mind was flooded with happiness on my selection but anxiety didn’t allow me to rejoice much. But, I felt on top of the world.  With heart felt thanks to GOD, parents and of course to all others who prayed for me, I joined the Group B cadre.</p>
-                </div>
+                @Html.DisplayFor(m=> m.BlogOverviews)
             </div>
         </div>
-
-        @*<div class="row">
-            <div class="home-tile-container col-xs-12">
-                <div class="home-tile photos-tile">
-                    <p class="home-tile-title">Photos</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="home-tile-container col-md-8 col-sm-12 col-xs-12">
-                <div class="home-tile travel-tile">
-                    <p class="home-tile-title">Travel Diaries</p>
-                </div>
-            </div>
-
-            <div class="home-tile-container col-md-4 col-xs-12">
-                <div class="home-tile kids-tile">
-                    <p class="home-tile-title">Kid's Corner</p>
-                </div>
-            </div>
-        </div>*@
     </div>
 </div>
 

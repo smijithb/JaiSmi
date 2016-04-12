@@ -1,0 +1,76 @@
+﻿@import (reference) "Util.less";
+
+@font-face {
+	font-family: variane_script;
+	src: url('/Content/fonts/variane_script.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Glyphicons Halflings;
+	src: url('../../fonts/glyphicons-halflings-regular.eot'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.woff');
+}
+
+.nodisplay {
+    display: none !important;
+}
+
+.home-content-wrapper, .blog-content-wrapper {
+    .activity-wrapper {
+        padding: 20px;
+
+        .activity-wrapper-title {
+            padding: 15px;
+            background: @color-dark-blue;
+            color: @color-white;
+            .box-shadow(1px, 1px, 3px, 2px, 0.3);
+            margin-bottom: 20px;
+            .f26;
+        }
+
+        .activity-grid {
+            .activity-item-link {
+                color: inherit;
+                margin-top: 10px;
+                display: block;
+                width: 200px;
+                .word-wrap(break-word);
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .activity-item {
+                font-family: variane_script;
+                display: inline-block;
+                margin-bottom: 10px;
+                .box-shadow(1px, 1px, 3px, 2px, 0.3);
+
+                .activity-cover-container {
+                    padding: 10px;
+
+                    .activity-cover {
+                        max-width: 200px;
+                        max-height: 400px;
+                    }
+                }
+
+                .activity-title {
+                    .f24;
+                    line-height: 34px;
+                    text-align: center;
+                    padding: 0 10px;
+                }
+
+                .activity-desc {
+                    .f20;
+                    line-height: 24px;
+                    padding: 0 10px;
+                    .word-wrap(break-word);
+                }
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+            padding: 20px 0;
+        }
+    }
+}

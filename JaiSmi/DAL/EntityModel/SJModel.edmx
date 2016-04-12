@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SJModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\App_Data\SJ.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BLOGS">
+          <Key>
+            <PropertyRef Name="BLOG_ID" />
+          </Key>
+          <Property Name="BLOG_ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BLOG_TITLE" Type="varchar" MaxLength="100" />
+          <Property Name="BLOG_CONTENT" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BLOG_CONTENT_OVERVIEW" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BLOG_URL" Type="varchar" MaxLength="100" />
+          <Property Name="BLOG_ORIGINAL_URL" Type="varchar" MaxLength="500" />
+          <Property Name="ADDED_DATE" Type="datetime" />
+          <Property Name="ADDED_BY" Type="uniqueidentifier" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="KIDS_CORNER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TITLE" Type="varchar" MaxLength="200" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="URL" Type="varchar" MaxLength="100" />
+          <Property Name="ADDED_DATE" Type="datetime" />
+          <Property Name="ADDED_BY" Type="uniqueidentifier" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="KIDS_CORNER_IMAGES">
+          <Key>
+            <PropertyRef Name="IMAGE_ID" />
+          </Key>
+          <Property Name="IMAGE_ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KIDS_ID" Type="integer" />
+          <Property Name="IMAGE_TITLE" Type="varchar" MaxLength="100" />
+          <Property Name="IMAGE_FILE" Type="varchar" MaxLength="200" />
+          <Property Name="IMAGE_DESC" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="IMAGE_URL" Type="varchar" MaxLength="100" />
+          <Property Name="IS_COVER" Type="bit" />
+          <Property Name="ADDED_DATE" Type="datetime" />
+          <Property Name="ADDED_BY" Type="uniqueidentifier" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="TRIP_IMAGES">
+          <Key>
+            <PropertyRef Name="IMAGE_ID" />
+          </Key>
+          <Property Name="IMAGE_ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TRIP_ID" Type="integer" />
+          <Property Name="IMAGE_TITLE" Type="varchar" MaxLength="100" />
+          <Property Name="IMAGE_FILE" Type="varchar" MaxLength="200" />
+          <Property Name="IMAGE_DESC" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="IMAGE_URL" Type="varchar" MaxLength="100" />
+          <Property Name="IS_COVER" Type="bit" />
+          <Property Name="ADDED_DATE" Type="datetime" />
+          <Property Name="ADDED_BY" Type="uniqueidentifier" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="TRIPS">
+          <Key>
+            <PropertyRef Name="TRIP_ID" />
+          </Key>
+          <Property Name="TRIP_ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TRIP_TITLE" Type="varchar" MaxLength="100" />
+          <Property Name="TRIP_DESCRIPTION" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TRIP_URL" Type="varchar" MaxLength="100" />
+          <Property Name="ADDED_DATE" Type="datetime" />
+          <Property Name="ADDED_BY" Type="uniqueidentifier" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FIRST_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="LAST_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="SALUTATION" Type="varchar" MaxLength="10" />
+          <Property Name="PASSWORD" Type="blob" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="URL" Type="varchar" MaxLength="100" />
+          <Property Name="PROFILE_PIC" Type="varchar" MaxLength="200" />
+          <Property Name="ADDED_DATE" Type="datetime" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_KIDS_CORNER_IMAGES_0_0">
+          <End Role="KIDS_CORNER" Type="Self.KIDS_CORNER" Multiplicity="0..1" />
+          <End Role="KIDS_CORNER_IMAGES" Type="Self.KIDS_CORNER_IMAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KIDS_CORNER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KIDS_CORNER_IMAGES">
+              <PropertyRef Name="KIDS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRIP_IMAGES_0_0">
+          <End Role="TRIPS" Type="Self.TRIPS" Multiplicity="0..1" />
+          <End Role="TRIP_IMAGES" Type="Self.TRIP_IMAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRIPS">
+              <PropertyRef Name="TRIP_ID" />
+            </Principal>
+            <Dependent Role="TRIP_IMAGES">
+              <PropertyRef Name="TRIP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SJModelStoreContainer">
+          <EntitySet Name="BLOGS" EntityType="Self.BLOGS" store:Type="Tables" />
+          <EntitySet Name="KIDS_CORNER" EntityType="Self.KIDS_CORNER" store:Type="Tables" />
+          <EntitySet Name="KIDS_CORNER_IMAGES" EntityType="Self.KIDS_CORNER_IMAGES" store:Type="Tables" />
+          <EntitySet Name="TRIP_IMAGES" EntityType="Self.TRIP_IMAGES" store:Type="Tables" />
+          <EntitySet Name="TRIPS" EntityType="Self.TRIPS" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" store:Type="Tables" />
+          <AssociationSet Name="FK_KIDS_CORNER_IMAGES_0_0" Association="Self.FK_KIDS_CORNER_IMAGES_0_0">
+            <End Role="KIDS_CORNER" EntitySet="KIDS_CORNER" />
+            <End Role="KIDS_CORNER_IMAGES" EntitySet="KIDS_CORNER_IMAGES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRIP_IMAGES_0_0" Association="Self.FK_TRIP_IMAGES_0_0">
+            <End Role="TRIPS" EntitySet="TRIPS" />
+            <End Role="TRIP_IMAGES" EntitySet="TRIP_IMAGES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SJModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SJEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="USERS" EntityType="SJModel.USER" />
+          <EntitySet Name="TRIP_IMAGES" EntityType="SJModel.TRIP_IMAGES" />
+          <EntitySet Name="TRIPS" EntityType="SJModel.TRIP" />
+          <AssociationSet Name="FK_TRIP_IMAGES_0_0" Association="SJModel.FK_TRIP_IMAGES_0_0">
+            <End Role="TRIP" EntitySet="TRIPS" />
+            <End Role="TRIP_IMAGES" EntitySet="TRIP_IMAGES" />
+          </AssociationSet>
+          <EntitySet Name="KIDS_CORNER" EntityType="SJModel.KIDS_CORNER" />
+          <EntitySet Name="KIDS_CORNER_IMAGES" EntityType="SJModel.KIDS_CORNER_IMAGES" />
+          <AssociationSet Name="FK_KIDS_CORNER_IMAGES_0_0" Association="SJModel.FK_KIDS_CORNER_IMAGES_0_0">
+            <End Role="KIDS_CORNER" EntitySet="KIDS_CORNER" />
+            <End Role="KIDS_CORNER_IMAGES" EntitySet="KIDS_CORNER_IMAGES" />
+          </AssociationSet>
+          <EntitySet Name="BLOGS" EntityType="SJModel.BLOG" />
+        </EntityContainer>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Guid" Nullable="false" />
+          <Property Name="FIRST_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LAST_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SALUTATION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PROFILE_PIC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ADDED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="TRIP_IMAGES">
+          <Key>
+            <PropertyRef Name="IMAGE_ID" />
+          </Key>
+          <Property Name="IMAGE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRIP_ID" Type="Int64" />
+          <Property Name="IMAGE_TITLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGE_FILE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGE_DESC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IS_COVER" Type="Boolean" />
+          <Property Name="ADDED_DATE" Type="DateTime" />
+          <Property Name="ADDED_BY" Type="Guid" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_BY" Type="Guid" />
+          <NavigationProperty Name="TRIP" Relationship="SJModel.FK_TRIP_IMAGES_0_0" FromRole="TRIP_IMAGES" ToRole="TRIP" />
+        </EntityType>
+        <EntityType Name="TRIP">
+          <Key>
+            <PropertyRef Name="TRIP_ID" />
+          </Key>
+          <Property Name="TRIP_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRIP_TITLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TRIP_DESCRIPTION" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TRIP_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ADDED_DATE" Type="DateTime" />
+          <Property Name="ADDED_BY" Type="Guid" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_BY" Type="Guid" />
+          <NavigationProperty Name="TRIP_IMAGES" Relationship="SJModel.FK_TRIP_IMAGES_0_0" FromRole="TRIP" ToRole="TRIP_IMAGES" />
+        </EntityType>
+        <Association Name="FK_TRIP_IMAGES_0_0">
+          <End Type="SJModel.TRIP" Role="TRIP" Multiplicity="0..1" />
+          <End Type="SJModel.TRIP_IMAGES" Role="TRIP_IMAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRIP">
+              <PropertyRef Name="TRIP_ID" />
+            </Principal>
+            <Dependent Role="TRIP_IMAGES">
+              <PropertyRef Name="TRIP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="KIDS_CORNER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ADDED_DATE" Type="DateTime" />
+          <Property Name="ADDED_BY" Type="Guid" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_BY" Type="Guid" />
+          <NavigationProperty Name="KIDS_CORNER_IMAGES" Relationship="SJModel.FK_KIDS_CORNER_IMAGES_0_0" FromRole="KIDS_CORNER" ToRole="KIDS_CORNER_IMAGES" />
+        </EntityType>
+        <EntityType Name="KIDS_CORNER_IMAGES">
+          <Key>
+            <PropertyRef Name="IMAGE_ID" />
+          </Key>
+          <Property Name="IMAGE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KIDS_ID" Type="Int64" />
+          <Property Name="IMAGE_TITLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGE_FILE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGE_DESC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IS_COVER" Type="Boolean" />
+          <Property Name="ADDED_DATE" Type="DateTime" />
+          <Property Name="ADDED_BY" Type="Guid" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_BY" Type="Guid" />
+          <NavigationProperty Name="KIDS_CORNER" Relationship="SJModel.FK_KIDS_CORNER_IMAGES_0_0" FromRole="KIDS_CORNER_IMAGES" ToRole="KIDS_CORNER" />
+        </EntityType>
+        <Association Name="FK_KIDS_CORNER_IMAGES_0_0">
+          <End Type="SJModel.KIDS_CORNER" Role="KIDS_CORNER" Multiplicity="0..1" />
+          <End Type="SJModel.KIDS_CORNER_IMAGES" Role="KIDS_CORNER_IMAGES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KIDS_CORNER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KIDS_CORNER_IMAGES">
+              <PropertyRef Name="KIDS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BLOG">
+          <Key>
+            <PropertyRef Name="BLOG_ID" />
+          </Key>
+          <Property Name="BLOG_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BLOG_TITLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BLOG_CONTENT" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BLOG_CONTENT_OVERVIEW" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BLOG_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BLOG_ORIGINAL_URL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ADDED_DATE" Type="DateTime" />
+          <Property Name="ADDED_BY" Type="Guid" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_BY" Type="Guid" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SJModelStoreContainer" CdmEntityContainer="SJEntities">
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="SJModel.USER">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="ADDED_DATE" ColumnName="ADDED_DATE" />
+                <ScalarProperty Name="PROFILE_PIC" ColumnName="PROFILE_PIC" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="SALUTATION" ColumnName="SALUTATION" />
+                <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+                <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRIP_IMAGES">
+            <EntityTypeMapping TypeName="SJModel.TRIP_IMAGES">
+              <MappingFragment StoreEntitySet="TRIP_IMAGES">
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="ADDED_BY" ColumnName="ADDED_BY" />
+                <ScalarProperty Name="ADDED_DATE" ColumnName="ADDED_DATE" />
+                <ScalarProperty Name="IS_COVER" ColumnName="IS_COVER" />
+                <ScalarProperty Name="IMAGE_URL" ColumnName="IMAGE_URL" />
+                <ScalarProperty Name="IMAGE_DESC" ColumnName="IMAGE_DESC" />
+                <ScalarProperty Name="IMAGE_FILE" ColumnName="IMAGE_FILE" />
+                <ScalarProperty Name="IMAGE_TITLE" ColumnName="IMAGE_TITLE" />
+                <ScalarProperty Name="TRIP_ID" ColumnName="TRIP_ID" />
+                <ScalarProperty Name="IMAGE_ID" ColumnName="IMAGE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRIPS">
+            <EntityTypeMapping TypeName="SJModel.TRIP">
+              <MappingFragment StoreEntitySet="TRIPS">
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="ADDED_BY" ColumnName="ADDED_BY" />
+                <ScalarProperty Name="ADDED_DATE" ColumnName="ADDED_DATE" />
+                <ScalarProperty Name="TRIP_URL" ColumnName="TRIP_URL" />
+                <ScalarProperty Name="TRIP_DESCRIPTION" ColumnName="TRIP_DESCRIPTION" />
+                <ScalarProperty Name="TRIP_TITLE" ColumnName="TRIP_TITLE" />
+                <ScalarProperty Name="TRIP_ID" ColumnName="TRIP_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KIDS_CORNER">
+            <EntityTypeMapping TypeName="SJModel.KIDS_CORNER">
+              <MappingFragment StoreEntitySet="KIDS_CORNER">
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="ADDED_BY" ColumnName="ADDED_BY" />
+                <ScalarProperty Name="ADDED_DATE" ColumnName="ADDED_DATE" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KIDS_CORNER_IMAGES">
+            <EntityTypeMapping TypeName="SJModel.KIDS_CORNER_IMAGES">
+              <MappingFragment StoreEntitySet="KIDS_CORNER_IMAGES">
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="ADDED_BY" ColumnName="ADDED_BY" />
+                <ScalarProperty Name="ADDED_DATE" ColumnName="ADDED_DATE" />
+                <ScalarProperty Name="IS_COVER" ColumnName="IS_COVER" />
+                <ScalarProperty Name="IMAGE_URL" ColumnName="IMAGE_URL" />
+                <ScalarProperty Name="IMAGE_DESC" ColumnName="IMAGE_DESC" />
+                <ScalarProperty Name="IMAGE_FILE" ColumnName="IMAGE_FILE" />
+                <ScalarProperty Name="IMAGE_TITLE" ColumnName="IMAGE_TITLE" />
+                <ScalarProperty Name="KIDS_ID" ColumnName="KIDS_ID" />
+                <ScalarProperty Name="IMAGE_ID" ColumnName="IMAGE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BLOGS">
+            <EntityTypeMapping TypeName="SJModel.BLOG">
+              <MappingFragment StoreEntitySet="BLOGS">
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="ADDED_BY" ColumnName="ADDED_BY" />
+                <ScalarProperty Name="ADDED_DATE" ColumnName="ADDED_DATE" />
+                <ScalarProperty Name="BLOG_ORIGINAL_URL" ColumnName="BLOG_ORIGINAL_URL" />
+                <ScalarProperty Name="BLOG_URL" ColumnName="BLOG_URL" />
+                <ScalarProperty Name="BLOG_CONTENT_OVERVIEW" ColumnName="BLOG_CONTENT_OVERVIEW" />
+                <ScalarProperty Name="BLOG_CONTENT" ColumnName="BLOG_CONTENT" />
+                <ScalarProperty Name="BLOG_TITLE" ColumnName="BLOG_TITLE" />
+                <ScalarProperty Name="BLOG_ID" ColumnName="BLOG_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

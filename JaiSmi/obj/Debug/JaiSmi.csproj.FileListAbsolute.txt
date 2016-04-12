@@ -24,4 +24,12 @@ F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Web.Helpers.xml
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Web.Mvc.xml
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.dll
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.pdb
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\EntityFramework.dll
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\EntityFramework.SqlServer.dll
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Data.SQLite.dll
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Data.SQLite.EF6.dll
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Data.SQLite.Linq.dll
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\EntityFramework.xml
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\EntityFramework.SqlServer.xml
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Data.SQLite.xml
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.csprojResolveAssemblyReference.cache

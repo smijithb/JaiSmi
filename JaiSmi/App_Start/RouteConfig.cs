@@ -12,7 +12,11 @@ namespace JaiSmi
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            // Map attribute routes first
+            routes.MapMvcAttributeRoutes();
+            // Register areas next
+            AreaRegistration.RegisterAllAreas();
+            // Finally define default routes
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

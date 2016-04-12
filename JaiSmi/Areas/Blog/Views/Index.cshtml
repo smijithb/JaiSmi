@@ -1,0 +1,27 @@
+﻿@using JaiSmi.Areas.Blog.Models;
+
+@{
+    ViewBag.Title = "Blogs";
+}
+
+@model BlogModel
+
+@Styles.Render("~/content/blog")
+
+<div class="blog-content-wrapper">
+    <div class="container">
+        <div class="activity-wrapper row">
+            <div class="activity-grid">
+                @Html.DisplayFor(m => m.BlogOverviews)
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginScriptContext())
+{
+    foreach (var script in BundleResolver.Current.GetBundleContents("~/bundles/blog"))
+    {
+        Html.AddScriptFile(script);
+    }
+}

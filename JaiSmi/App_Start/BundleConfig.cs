@@ -24,24 +24,39 @@ namespace JaiSmi
             // Isotope
             bundles.Add(new ScriptBundle("~/bundles/isotope").Include("~/Scripts/ScriptsLib/isotope/isotope_2.2.2.pkgd.min.js", "~/Scripts/ScriptsLib/isotope/imagesloaded.pkgd.min.js"));
 
+            // CKEditor
+            bundles.Add(new ScriptBundle("~/bundles/ckeditor").Include("~/Scripts/ScriptsLib/ckeditor/ckeditor.js", "~/Scripts/ScriptsLib/ckeditor/adapters/jquery.js"));
+
             // Shared
             bundles.Add(new ScriptBundle("~/bundles/shared").Include("~/Scripts/Shared/Shared.js"));
 
             // Home
             bundles.Add(new ScriptBundle("~/bundles/home").Include("~/Scripts/Home/Home.js"));
 
+            // Blog
+            bundles.Add(new ScriptBundle("~/bundles/blog").Include("~/Areas/Blog/Scripts/Blog.js"));
+
             #endregion
 
             #region CSS Bundles
 
             // Bootstrap
-            bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap/bootstrap.min.css"));
+            bundles.Add(new StyleBundle("~/content/bootstrap").Include("~/Content/bootstrap/bootstrap.min.css"));
 
             // Layout
-            bundles.Add(new StyleBundle("~/Content/layout").Include("~/Content/LessInput/Layout.min.css"));
+            bundles.Add(new StyleBundle("~/content/layout").Include("~/Content/LessInput/Layout.min.css"));
+
+            // Shared
+            bundles.Add(new StyleBundle("~/content/shared").Include("~/Content/LessInput/Shared.min.css"));
 
             // Home
-            bundles.Add(new StyleBundle("~/Content/home").Include("~/Content/LessInput/Home.min.css"));
+            bundles.Add(new StyleBundle("~/content/home").Include("~/Content/LessInput/Home.min.css"));
+
+            // Admin
+            bundles.Add(new StyleBundle("~/content/blog").Include("~/Areas/Blog/Content/LessInput/Blog.min.css"));
+
+            // Admin
+            bundles.Add(new StyleBundle("~/content/admin").Include("~/Areas/Admin/Content/LessInput/Admin.min.css"));
 
             #endregion
         }

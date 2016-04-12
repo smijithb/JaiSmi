@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JaiSmi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace JaiSmi.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            HomeModel model = new HomeModel();
+            return View(model);
         }
     }
 }
