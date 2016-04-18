@@ -67,13 +67,15 @@ namespace JaiSmi.Areas.Admin.Code
                                  orderby pubDate
                                  select new BLOG
                                  {
-                                     BLOG_TITLE = b.Element("title").Value,
+                                     BLOG_TITLE = b.Element("title").Value.Trim(),
                                      BLOG_CONTENT = b.Element("description").Value,
                                      BLOG_CONTENT_OVERVIEW = Utility.TrimContent(Utility.StripHTML(b.Element("description").Value), BlogHelper.MaxOverviewContentLength, ".", true),
-                                     BLOG_URL = UrlMapper.CreateBlogUrl(Utility.TrimContent(b.Element("title").Value, BlogHelper.MaxBlogUrlLength, " ")),
+                                     BLOG_URL = UrlMapper.CreateBlogPostUrl(Utility.TrimContent(b.Element("title").Value.Trim(), BlogHelper.MaxBlogUrlLength, " ")),
                                      BLOG_ORIGINAL_URL = b.Element("link").Value,
                                      ADDED_DATE = pubDate,
-                                     UPDATED_DATE = DataCast.ToDateTime(b.Element(atomNameSpace + "updated").Value)
+                                     //ADDED_BY = null, // TODO: Add user id once authentication is implemented.
+                                     UPDATED_DATE = DataCast.ToDateTime(b.Element(atomNameSpace + "updated").Value),
+                                     //UPDATED_BY = null // TODO: Add user id once authentication is implemented.
                                  }).ToList();
 
                     context.BLOGS.AddRange(posts);

@@ -1,20 +1,25 @@
-﻿@model JaiSmi.Models.HeaderModel
+﻿@using JaiSmi.Code.Util;
+
+@model JaiSmi.Models.HeaderModel
 
 <div class="header">
     <div class="header-links-wrapper">
         <ul class="header-links">
-            <li class="link-selected">
+            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.Home ? "link-selected" : "")">
                 <a href="@Model.HomeUrl">Home</a>
             </li>
-            <li>
+            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.Blog ? "link-selected" : "")">
                 <a href="@Model.BlogUrl">Blog</a>
             </li>
-            <li>
+            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.TravelDiaries ? "link-selected" : "")">
                 <a href="@Model.TravelDiariesUrl">Travel Diaries</a>
             </li>
-            <li>
+            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.KidsCo ? "link-selected" : "")">
                 <a href="@Model.KidsCoUrl">Kid's Co</a>
             </li>
         </ul>
+    </div>
+    <div class="main-menu-icon-container visible-xs-block">
+        <span id="spanMainMenu" class="glyphicon glyphicon-menu-hamburger main-menu-icon"></span>
     </div>
 </div>

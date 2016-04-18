@@ -15,13 +15,19 @@
   font-size: 20px;
   color: #ffffff;
   line-height: 25px;
-  background: #F39643;
+  background: #f39643;
   box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 3px 2px 0.3;
   behavior: url("/Scripts/Compatibility/PIE.htc");
   padding: 20px;
   float: none;
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .home-description .home-description-content {
+    font-family: variane_script;
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 .home-content-wrapper .row {
   margin-top: 25px;
@@ -39,7 +45,6 @@
   position: relative;
   height: 400px;
   box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 3px 2px 0.3;
   behavior: url("/Scripts/Compatibility/PIE.htc");
 }
 .home-content-wrapper .home-tile-container .home-tile .home-tile-title {

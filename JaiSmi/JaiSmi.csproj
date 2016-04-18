@@ -649,6 +649,7 @@
     <Content Include="Scripts\ScriptsLib\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Scripts\ScriptsLib\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Scripts\ScriptsLib\ckeditor\skins\moono\readme.md" />
+    <None Include="Properties\PublishProfiles\SmithaJayakanthan_Test_Publish.pubxml" />
     <None Include="Scripts\ScriptsLib\jQuery\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.unobtrusive-ajax.min.js" />
@@ -677,7 +678,9 @@
     <Compile Include="Areas\Blog\Models\BlogModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogPostDetailsModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogPostModel.cs" />
+    <Compile Include="Areas\Blog\Models\BlogResultModel.cs" />
     <Compile Include="Code\Util\DataCast.cs" />
+    <Compile Include="Code\Util\PublicEnums.cs" />
     <Compile Include="Code\Util\UrlMapper.cs" />
     <Compile Include="Code\Util\Utility.cs" />
     <Compile Include="Controllers\HomeController.cs" />

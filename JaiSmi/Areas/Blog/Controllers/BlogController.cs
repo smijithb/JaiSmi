@@ -17,8 +17,9 @@ namespace JaiSmi.Areas.Blog.Controllers
             return View("~/Areas/Blog/Views/Index.cshtml", model);
         }
 
+        [Route("~/blog/post/")]
         [Route("~/blog/post/{url:regex(^[a-zA-Z0-9-]+$)}")]
-        public ActionResult BlogPost(string url)
+        public ActionResult ViewPost(string url)
         {
             BlogPostDetailsModel model = new BlogPostDetailsModel(url);
             return View("~/Areas/Blog/Views/BlogPost.cshtml", model);
@@ -26,9 +27,12 @@ namespace JaiSmi.Areas.Blog.Controllers
 
         [HttpPost]
         [Route("~/blog/post/update")]
-        public bool Update(long postId, string postTitle, string postContent)
+        public JsonResult Update(long postId, string postTitle, string postContent)
         {
-            return BlogHelper.UpdatePost(postId, HttpUtility.UrlDecode(postTitle), HttpUtility.UrlDecode(postContent));
+            if (postId == -1)
+                return Json(BlogHelper.InsertPost(HttpUtility.UrlDecode(postTitle), HttpUtility.UrlDecode(postContent)));
+            else
+                return Json(BlogHelper.UpdatePost(postId, HttpUtility.UrlDecode(postTitle), HttpUtility.UrlDecode(postContent)));
         }
     }
 }

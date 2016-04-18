@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        @{Html.RenderPartial("~/Views/Shared/Header.cshtml", new HeaderModel());}
+        @{Html.RenderPartial("~/Views/Shared/Header.cshtml", new HeaderModel() { SelectedMenu = ViewBag.Menu });}
         <div class="content-wrapper">
             @RenderBody()
         </div>

@@ -1,7 +1,13 @@
 ﻿@using System.Web.Optimization;
 @using JaiSmi.Models;
+@using JaiSmi.Code.Util;
 
 @Styles.Render("~/content/home")
+
+@{
+    ViewBag.Title = "Home";
+    ViewBag.Menu = PublicEnums.Menu.Home;
+}
 
 @model HomeModel
 

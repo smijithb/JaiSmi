@@ -37,6 +37,9 @@
                 &:hover {
                     text-decoration: none;
                 }
+                @media screen and (max-width: @screen-xs-max) {
+                    width: 150px;
+                }
             }
             .activity-item {
                 font-family: variane_script;
@@ -70,7 +73,7 @@
         }
 
         @media screen and (max-width: @screen-xs-max) {
-            padding: 20px 0;
+            padding: 0;
         }
     }
 }

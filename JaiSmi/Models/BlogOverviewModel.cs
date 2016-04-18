@@ -21,7 +21,7 @@ namespace JaiSmi.Models
         public string Content { get; set; }
         public string Url
         {
-            get { return string.Format("{0}{1}", UrlMapper.BlogPostBaseUrl, url); }
+            get { return UrlMapper.FormatBlogPostUrl(url); }
             set { url = value; }
         }
 

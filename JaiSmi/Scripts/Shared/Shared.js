@@ -31,12 +31,26 @@ Namespace("sj.util", {
         else {
             $('.header').css('height', 'inherit');
         }
+    },
+    setContainerFluidMinHeight: function () {
+        $('.container-fluid').css('minHeight', $(window).innerHeight());
+    },
+    bindMenuIconClick: function () {
+        $('#spanMainMenu').on('click', function () {
+            $('.header-links-wrapper').toggleClass('auto-height ');
+        });
     }
 });
 
+sj.util.setContainerFluidMinHeight();
+
 $(document).ready(function () {
-    sj.util.setHeaderHeight();
-    $(window).on('resize', sj.util.setHeaderHeight);
+    //sj.util.setHeaderHeight();
+    sj.util.bindMenuIconClick();
+    $(window).on('resize', function () {
+        //sj.util.setHeaderHeight();
+        sj.util.setContainerFluidMinHeight();
+    });
 
     var activityGrid = $('.activity-grid').isotope({
         itemSelector: '.activity-item',

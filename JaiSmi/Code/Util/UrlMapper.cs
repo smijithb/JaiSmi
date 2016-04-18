@@ -16,7 +16,7 @@ namespace JaiSmi.Code.Util
         public const string TravelDiariesBaseUrl = "/travel-diaries/";
         public const string KidsCoUrl = "/kids-corner/";
 
-        public static string CreateBlogUrl(string blogTitle)
+        public static string CreateBlogPostUrl(string blogTitle)
         {
             using (var context = new SJEntities())
             {
@@ -27,6 +27,16 @@ namespace JaiSmi.Code.Util
 
                 return GetUniqueUrl(url, blogUrls);
             }
+        }
+
+        public static string FormatBlogPostUrl(string blogUrl)
+        {
+            return string.Format("{0}{1}", BlogPostBaseUrl, blogUrl);
+        }
+
+        public static string FormatCreateNewBlogPostUrl()
+        {
+            return BlogPostBaseUrl;
         }
 
         private static string GetUniqueUrl(string url, List<string> existingUrls, int counter = 0)

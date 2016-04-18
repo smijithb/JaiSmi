@@ -10,6 +10,9 @@
 
 <div class="blog-content-wrapper">
     <div class="container">
+        <div class="row blog-post-create-btn-wrapper">
+            <a href="@Model.CreateNewPostUrl" class="btn btn-primary btn-create-post">What's on your mind?</a>
+        </div>
         <div class="activity-wrapper row">
             <div class="activity-grid">
                 @Html.DisplayFor(m => m.BlogOverviews)

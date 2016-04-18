@@ -18,11 +18,16 @@
             font-size: 20px;
             color: @color-white;
             line-height: 25px;
-            background: #F39643;// #CF5B44;
+            background: @color-orange;// #CF5B44;
             .box-shadow(1px, 1px, 3px, 2px, 0.3);
             padding: 20px;
             float: none;
             margin: 0 auto;
+            @media screen and (max-width: @screen-xs-max) {
+                font-family: variane_script;
+                font-size: 30px;
+                line-height: 35px;
+            }
         }
     }
 .home-content-wrapper {
