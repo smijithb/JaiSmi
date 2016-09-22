@@ -1,0 +1,31 @@
+﻿@using JaiSmi.Models;
+
+@model TravelOverviewModel
+
+@{
+    ViewBag.Title = "Travel Diaries";
+}
+
+@Styles.Render("~/content/travel")
+
+<div class="travel-content-wrapper">
+    <div class="container">
+        <div class="row add-new-album-wrapper">
+            <h2 class="no-album-title">You don't have any albums yet. Add a new one?</h2>
+            <div class="new-album-btn-container">
+                <a href="/travel-diaries/new" class="btn btn-primary new-album-btn">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="new-album-btn-text">Album</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginScriptContext())
+{
+    foreach (var script in BundleResolver.Current.GetBundleContents("~/bundles/travel"))
+    {
+        Html.AddScriptFile(script);
+    }
+}

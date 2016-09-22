@@ -36,6 +36,9 @@ namespace JaiSmi
             // Blog
             bundles.Add(new ScriptBundle("~/bundles/blog").Include("~/Areas/Blog/Scripts/Blog.js"));
 
+            // Travel
+            bundles.Add(new ScriptBundle("~/bundles/travel").Include("~/Areas/Travel/Scripts/Travel.js"));
+
             #endregion
 
             #region CSS Bundles
@@ -52,8 +55,11 @@ namespace JaiSmi
             // Home
             bundles.Add(new StyleBundle("~/content/home").Include("~/Content/LessInput/Home.min.css"));
 
-            // Admin
+            // Blog
             bundles.Add(new StyleBundle("~/content/blog").Include("~/Areas/Blog/Content/LessInput/Blog.min.css"));
+
+            // Travel
+            bundles.Add(new StyleBundle("~/content/travel").Include("~/Areas/Travel/Content/LessInput/Travel.min.css"));
 
             // Admin
             bundles.Add(new StyleBundle("~/content/admin").Include("~/Areas/Admin/Content/LessInput/Admin.min.css"));

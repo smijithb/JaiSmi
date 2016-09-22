@@ -137,6 +137,13 @@
       <DependentUpon>Blog.css</DependentUpon>
     </Content>
     <Content Include="Areas\Blog\Scripts\Blog.js" />
+    <Content Include="Areas\Travel\Content\LessInput\Travel.css">
+      <DependentUpon>Travel.less</DependentUpon>
+    </Content>
+    <Content Include="Areas\Travel\Content\LessInput\Travel.min.css">
+      <DependentUpon>Travel.css</DependentUpon>
+    </Content>
+    <Content Include="Areas\Travel\Scripts\Travel.js" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -649,6 +656,13 @@
     <Content Include="Scripts\ScriptsLib\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Scripts\ScriptsLib\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Scripts\ScriptsLib\ckeditor\skins\moono\readme.md" />
+    <Content Include="Areas\Travel\Views\web.config" />
+    <Content Include="Areas\Travel\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Travel\Views\Index.cshtml" />
+    <Content Include="Areas\Travel\Content\LessInput\Travel.less" />
+    <Content Include="Areas\Travel\Content\LessInput\Travel.css.map">
+      <DependentUpon>Travel.css</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\SmithaJayakanthan_Test_Publish.pubxml" />
     <None Include="Scripts\ScriptsLib\jQuery\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\ScriptsLib\jQuery\jquery.unobtrusive-ajax.js" />
@@ -679,6 +693,10 @@
     <Compile Include="Areas\Blog\Models\BlogPostDetailsModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogPostModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogResultModel.cs" />
+    <Compile Include="Areas\Travel\Controllers\TravelController.cs" />
+    <Compile Include="DAL\Helpers\TravelHelper.cs" />
+    <Compile Include="Models\TravelOverviewModel.cs" />
+    <Compile Include="Areas\Travel\TravelAreaRegistration.cs" />
     <Compile Include="Code\Util\DataCast.cs" />
     <Compile Include="Code\Util\PublicEnums.cs" />
     <Compile Include="Code\Util\UrlMapper.cs" />
@@ -751,6 +769,8 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Blog\Views\Shared\" />
+    <Folder Include="Areas\Travel\Models\" />
+    <Folder Include="Areas\Travel\Views\Shared\" />
     <Folder Include="Images\KidsCorner\" />
     <Folder Include="Images\Profile\" />
     <Folder Include="Images\Trips\" />
