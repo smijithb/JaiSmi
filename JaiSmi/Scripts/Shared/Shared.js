@@ -42,6 +42,7 @@ Namespace("sj.util", {
     }
 });
 
+// Set the container min height.
 sj.util.setContainerFluidMinHeight();
 
 $(document).ready(function () {
