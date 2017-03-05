@@ -13,4 +13,9 @@
 .travel-content-wrapper .add-new-album-wrapper .new-album-btn-container .new-album-btn {
   font-size: 20px;
 }
+.travel-content-wrapper .add-new-album-wrapper .new-album-btn-container .new-album-btn .new-album-btn-text {
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 20px;
+}
 /*# sourceMappingURL=Travel.css.map */
