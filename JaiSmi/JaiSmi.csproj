@@ -746,6 +746,7 @@
     <Compile Include="Areas\Blog\Models\BlogPostModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogResultModel.cs" />
     <Compile Include="Areas\Travel\Controllers\TravelController.cs" />
+    <Compile Include="DAL\Helpers\AccountHelper.cs" />
     <Compile Include="DAL\Helpers\TravelHelper.cs" />
     <Compile Include="Models\TravelOverviewModel.cs" />
     <Compile Include="Areas\Travel\TravelAreaRegistration.cs" />
@@ -794,6 +795,7 @@
     <Compile Include="Models\BlogOverviewModel.cs" />
     <Compile Include="Models\HeaderModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
