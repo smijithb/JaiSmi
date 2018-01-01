@@ -16,8 +16,8 @@ namespace JaiSmi.Areas.Admin
         {
             context.MapRoute(
                 "Admin_default",
-                "admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "admin/{action}/{id}",
+                new { action = "Index", id = UrlParameter.Optional, Area = AreaName }
             );
         }
     }

@@ -64,6 +64,9 @@ namespace JaiSmi
             // Admin
             bundles.Add(new StyleBundle("~/content/admin").Include("~/Areas/Admin/Content/LessInput/Admin.min.css"));
 
+            // Account
+            bundles.Add(new StyleBundle("~/content/account").Include("~/Areas/Admin/Content/LessInput/Account.min.css"));
+
             #endregion
         }
     }

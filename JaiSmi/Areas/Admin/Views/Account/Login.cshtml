@@ -1,0 +1,32 @@
+﻿@using System.Web.Optimization;
+@using JaiSmi.Models;
+@using JaiSmi.Code.Util;
+
+@Styles.Render("~/content/account")
+
+@{
+    ViewBag.Title = "Login";
+    ViewBag.Menu = PublicEnums.Menu.Home;
+}
+@using (Html.BeginForm("Authenticate", "Account", new { area = "Admin" }, FormMethod.Post)) {
+    <div class="account-content-wrapper">
+        <div class="login-container container">
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">Email:</span>
+            </div>
+            <div class="row">
+                <input name="emailAddress" type="text" class="input-box email-address col-xs-12" autofocus="autofocus" />
+            </div>
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">Password:</span>
+            </div>
+            <div class="row">
+                <input name="password" type="password" class="input-box password col-xs-12" />
+            </div>
+            <div class="row account-btn-row">
+                <input type="submit" class="btn btn-primary btn-account-login col-xs-12" value="Login" />
+            </div>
+        </div>
+    </div>
+}
+

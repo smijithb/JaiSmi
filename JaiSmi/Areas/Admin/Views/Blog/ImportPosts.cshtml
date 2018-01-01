@@ -1,5 +1,10 @@
-﻿@{
+﻿@using System.Web.Optimization;
+@using JaiSmi.Models;
+@using JaiSmi.Code.Util;
+
+@{
     ViewBag.Title = "Imports blog posts from blogspot";
+    ViewBag.Menu = PublicEnums.Menu.Home;
 }
 
 @Styles.Render("~/content/admin")

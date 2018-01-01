@@ -1,0 +1,38 @@
+﻿.account-content-wrapper .login-container {
+  width: 400px;
+}
+.account-content-wrapper .row {
+  margin: 10px 0;
+}
+.account-content-wrapper .account-label-row {
+  margin: 5px 0;
+  font-size: 10px;
+  color: #4285f4;
+}
+.account-content-wrapper span.account-label {
+  padding: 0;
+  text-align: left;
+}
+.account-content-wrapper .input-box {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #757575;
+  padding: 0;
+  height: 30px;
+}
+.account-content-wrapper .input-box:focus {
+  border-bottom: 3px solid #4285f4;
+  -moz-transition: border-color 0.5s ease-in;
+  -o-transition: border-color 0.5s ease-in;
+  -webkit-transition: border-color 0.5s ease-in;
+  transition: border-color 0.5s ease-in;
+}
+.account-content-wrapper .account-btn-row {
+  margin-top: 20px;
+  text-align: right;
+}
+.account-content-wrapper .btn-account-login {
+  width: 100px;
+  float: right;
+}
+/*# sourceMappingURL=Account.css.map */

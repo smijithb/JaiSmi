@@ -1,0 +1,38 @@
+﻿@import (reference) "../../../../Content/LessInput/Util.less";
+
+.account-content-wrapper {
+    .login-container {
+        width: 400px;      
+    }
+    .row {
+        margin: 10px 0;
+    }  
+    .account-label-row {
+        margin: 5px 0;
+        font-size: 10px;
+        color: @label-blue;
+    }
+    span.account-label {
+        padding: 0;
+        text-align:left;
+    }
+    .input-box {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid @input-border;
+        padding: 0;
+        height: 30px;
+    }
+    .input-box:focus {
+        border-bottom: 3px solid @input-border-focus;
+        .transition(border-color 0.5s ease-in);
+    }
+    .account-btn-row {
+        margin-top: 20px;
+        text-align: right;
+    }
+    .btn-account-login {
+        width: 100px;
+        float: right;
+    }
+}

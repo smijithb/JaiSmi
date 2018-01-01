@@ -12,14 +12,14 @@ namespace JaiSmi.Areas.Admin.Controllers
         [Route("admin/blog/import")]
         public ActionResult Index()
         {
-            return View("~/Areas/Admin/Views/Admin/Blog/ImportPosts.cshtml");
+            return View("~/Areas/Admin/Views/Blog/ImportPosts.cshtml");
         }
 
         public ActionResult Insert()
         {
             BlogImporter importer = new BlogImporter();
             importer.ImportBlogs();
-            return View("~/Areas/Admin/Views/Admin/Blog/ImportPosts.cshtml");
+            return View("~/Areas/Admin/Views/Blog/ImportPosts.cshtml");
         }
     }
 }
