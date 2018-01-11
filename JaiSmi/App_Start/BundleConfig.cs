@@ -39,6 +39,11 @@ namespace JaiSmi
             // Travel
             bundles.Add(new ScriptBundle("~/bundles/travel").Include("~/Areas/Travel/Scripts/Travel.js"));
 
+            //Validation
+            bundles.Add(new ScriptBundle("~/bundles/validation").Include("~/Scripts/ScriptsLib/jQuery/jquery.validate.min.js",
+                "~/Scripts/ScriptsLib/jQuery/jquery.validate.unobtrusive.min.js",
+                "~/Scripts/ScriptsLib/jQuery/jquery.unobtrusive-ajax.min.js"));
+
             #endregion
 
             #region CSS Bundles

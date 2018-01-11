@@ -1,6 +1,9 @@
 ﻿.account-content-wrapper .login-container {
   width: 400px;
 }
+.account-content-wrapper .signup-container {
+  width: 400px;
+}
 .account-content-wrapper .row {
   margin: 10px 0;
 }
@@ -8,6 +11,12 @@
   margin: 5px 0;
   font-size: 10px;
   color: #4285f4;
+}
+.account-content-wrapper .error-message {
+  margin: 5px 0;
+  font-size: 10px;
+  color: #4285f4;
+  color: #d50000;
 }
 .account-content-wrapper span.account-label {
   padding: 0;

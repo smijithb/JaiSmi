@@ -25,11 +25,11 @@ namespace JaiSmi.DAL.EntityModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<USER> USERS { get; set; }
-        public virtual DbSet<TRIP_IMAGES> TRIP_IMAGES { get; set; }
-        public virtual DbSet<TRIP> TRIPS { get; set; }
+        public virtual DbSet<BLOG> BLOGS { get; set; }
         public virtual DbSet<KIDS_CORNER> KIDS_CORNER { get; set; }
         public virtual DbSet<KIDS_CORNER_IMAGES> KIDS_CORNER_IMAGES { get; set; }
-        public virtual DbSet<BLOG> BLOGS { get; set; }
+        public virtual DbSet<TRIP_IMAGES> TRIP_IMAGES { get; set; }
+        public virtual DbSet<TRIP> TRIPS { get; set; }
+        public virtual DbSet<USER> USERS { get; set; }
     }
 }

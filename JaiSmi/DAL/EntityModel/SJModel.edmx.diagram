@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5a3aaed032dd43fda5f9655b7640c75c" Name="Diagram1">
-        <EntityTypeShape EntityType="SJModel.USER" Width="1.5" PointX="0.75" PointY="0.5" />
-        <EntityTypeShape EntityType="SJModel.TRIP_IMAGES" Width="1.5" PointX="4.75" PointY="0.5" />
-        <EntityTypeShape EntityType="SJModel.TRIP" Width="1.5" PointX="2.75" PointY="0.5" />
-        <AssociationConnector Association="SJModel.FK_TRIP_IMAGES_0_0" />
-        <EntityTypeShape EntityType="SJModel.KIDS_CORNER" Width="1.5" PointX="6.75" PointY="0.5" />
-        <EntityTypeShape EntityType="SJModel.KIDS_CORNER_IMAGES" Width="1.5" PointX="8.75" PointY="0.5" />
-        <AssociationConnector Association="SJModel.FK_KIDS_CORNER_IMAGES_0_0" />
-        <EntityTypeShape EntityType="SJModel.BLOG" Width="1.5" PointX="0.75" PointY="3.75" />
+      <Diagram DiagramId="d31406f7d5fd4013983dd2c85708a16f" Name="Diagram1">
+        <EntityTypeShape EntityType="SJModel.BLOG" Width="1.5" PointX="0.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SJModel.KIDS_CORNER" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SJModel.KIDS_CORNER_IMAGES" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SJModel.TRIP_IMAGES" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SJModel.TRIP" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="SJModel.FK_KIDS_CORNER_IMAGES_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="SJModel.FK_TRIP_IMAGES_0_0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SJModel.USER" Width="1.5" PointX="3" PointY="4.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

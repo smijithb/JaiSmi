@@ -1,0 +1,76 @@
+﻿@using System.Web.Optimization;
+@using JaiSmi.Models;
+@using JaiSmi.Code.Util;
+
+@model UserModel
+
+@Styles.Render("~/content/account")
+
+@{
+    ViewBag.Title = "Signup";
+    ViewBag.Menu = PublicEnums.Menu.Home;
+}
+@using (Html.BeginForm("CreateUser", "Account", new { area = "Admin" }, FormMethod.Post))
+{
+    <div class="account-content-wrapper">
+        <div class="signup-container container">
+            @Html.AntiForgeryToken()
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">First Name:</span>
+            </div>
+            <div class="row">
+                @Html.TextBoxFor(m => m.FirstName, new { @class="input-box col-xs-12", autofocus="autofocus" })
+            </div>
+            <div class="row error-message">
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">Last Name:</span>
+            </div>
+            <div class="row">
+                @Html.TextBoxFor(m => m.LastName, new { @class="input-box col-xs-12" })
+            </div>
+            <div class="row error-message">
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">Email Address:</span>
+            </div>
+            <div class="row">
+                @Html.TextBoxFor(m => m.EmailAddress, new { @class="input-box col-xs-12" })
+            </div>
+            <div class="row error-message">
+                @Html.ValidationMessageFor(m => m.EmailAddress)
+            </div>
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">Password:</span>
+            </div>
+            <div class="row">
+                @Html.TextBoxFor(m => m.Password, new { @class="input-box col-xs-12" })
+            </div>
+            <div class="row error-message">
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+            <div class="row account-label-row">
+                <span class="account-label col-xs-12">Re-type Password:</span>
+            </div>
+            <div class="row">
+                @Html.TextBoxFor(m => m.RetypedPassword, new { @class="input-box col-xs-12" })
+            </div>
+            <div class="row error-message">
+                @Html.ValidationMessageFor(m => m.RetypedPassword)
+            </div>
+            <div class="row account-btn-row">
+                <input type="submit" class="btn btn-primary btn-account-login col-xs-12" value="Sign up" />
+            </div>
+        </div>
+    </div>
+}
+
+@using (Html.BeginScriptContext())
+{
+    foreach (var script in BundleResolver.Current.GetBundleContents("~/bundles/validation"))
+    {
+        Html.AddScriptFile(script);
+    }
+}

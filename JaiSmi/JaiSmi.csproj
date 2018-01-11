@@ -19,7 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <NuGetPackageImportStamp>81bf1ce6</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>634f53d4</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,16 +92,16 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Core.1.0.104.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.106.0\lib\net451\System.Data.SQLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.104.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.106.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.104.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.106.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
@@ -243,7 +243,26 @@
       <DependentUpon>Account.css</DependentUpon>
     </Content>
     <Content Include="Areas\Admin\Views\Account\Home.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Signup.cshtml" />
+    <EntityDeploy Include="DAL\EntityModel\SJModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SJModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\EntityModel\SJModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SJModel.edmx</DependentUpon>
+      <LastGenOutput>SJModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\EntityModel\SJModel.edmx.diagram">
+      <DependentUpon>SJModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\EntityModel\SJModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SJModel.edmx</DependentUpon>
+      <LastGenOutput>SJModel.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Nuget_PM.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -671,23 +690,6 @@
     <Content Include="Areas\Admin\Content\LessInput\Admin.css.map">
       <DependentUpon>Admin.css</DependentUpon>
     </Content>
-    <EntityDeploy Include="DAL\EntityModel\SJModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SJModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DAL\EntityModel\SJModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SJModel.edmx</DependentUpon>
-      <LastGenOutput>SJModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DAL\EntityModel\SJModel.edmx.diagram">
-      <DependentUpon>SJModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="DAL\EntityModel\SJModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SJModel.edmx</DependentUpon>
-      <LastGenOutput>SJModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Areas\Blog\Views\web.config" />
     <Content Include="Areas\Blog\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Blog\Views\Index.cshtml" />
@@ -758,15 +760,6 @@
     <Compile Include="Areas\Blog\Models\BlogPostModel.cs" />
     <Compile Include="Areas\Blog\Models\BlogResultModel.cs" />
     <Compile Include="Areas\Travel\Controllers\TravelController.cs" />
-    <Compile Include="DAL\Helpers\AccountHelper.cs" />
-    <Compile Include="DAL\Helpers\TravelHelper.cs" />
-    <Compile Include="Models\TravelOverviewModel.cs" />
-    <Compile Include="Areas\Travel\TravelAreaRegistration.cs" />
-    <Compile Include="Code\Util\DataCast.cs" />
-    <Compile Include="Code\Util\PublicEnums.cs" />
-    <Compile Include="Code\Util\UrlMapper.cs" />
-    <Compile Include="Code\Util\Utility.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\EntityModel\BLOG.cs">
       <DependentUpon>SJModel.tt</DependentUpon>
     </Compile>
@@ -800,6 +793,15 @@
     <Compile Include="DAL\EntityModel\USER.cs">
       <DependentUpon>SJModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Helpers\AccountHelper.cs" />
+    <Compile Include="DAL\Helpers\TravelHelper.cs" />
+    <Compile Include="Models\TravelOverviewModel.cs" />
+    <Compile Include="Areas\Travel\TravelAreaRegistration.cs" />
+    <Compile Include="Code\Util\DataCast.cs" />
+    <Compile Include="Code\Util\PublicEnums.cs" />
+    <Compile Include="Code\Util\UrlMapper.cs" />
+    <Compile Include="Code\Util\Utility.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\Helpers\BlogHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -869,12 +871,12 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

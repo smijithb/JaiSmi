@@ -11,6 +11,7 @@
 @using (Html.BeginForm("Authenticate", "Account", new { area = "Admin" }, FormMethod.Post)) {
     <div class="account-content-wrapper">
         <div class="login-container container">
+            @Html.AntiForgeryToken()
             <div class="row account-label-row">
                 <span class="account-label col-xs-12">Email:</span>
             </div>

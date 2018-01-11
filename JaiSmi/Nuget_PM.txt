@@ -1,0 +1,15 @@
+Uninstall-Package System.Data.SQLite.Core -Force
+Uninstall-Package System.Data.SQLite -Force
+Uninstall-Package System.Data.SQLite.EF6 -Force
+Uninstall-Package System.Data.SQLite.Linq -Force
+
+Install-Package System.Data.SQLite.Core -Version 1.0.99.0
+Install-Package System.Data.SQLite.Linq -Version 1.0.99.0
+Install-Package System.Data.SQLite.EF6 -Version 1.0.99.0
+Install-Package System.Data.SQLite -Version 1.0.99.0
+
+
+Install-Package System.Data.SQLite.Core -Version 1.0.104.0
+Install-Package System.Data.SQLite.Linq -Version 1.0.104.0
+Install-Package System.Data.SQLite.EF6 -Version 1.0.104.0
+Install-Package System.Data.SQLite -Version 1.0.104.0

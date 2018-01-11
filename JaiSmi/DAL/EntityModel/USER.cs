@@ -17,12 +17,13 @@ namespace JaiSmi.DAL.EntityModel
         public System.Guid USER_ID { get; set; }
         public string FIRST_NAME { get; set; }
         public string LAST_NAME { get; set; }
-        public string SALUTATION { get; set; }
-        public byte[] PASSWORD { get; set; }
-        public string DESCRIPTION { get; set; }
+        public string PASSWORD { get; set; }
+        public string BIO { get; set; }
         public string URL { get; set; }
         public string PROFILE_PIC { get; set; }
         public Nullable<System.DateTime> ADDED_DATE { get; set; }
         public Nullable<System.DateTime> UPDATED_DATE { get; set; }
+        public string USERNAME { get; set; }
+        public string EMAIL_ADDRESS { get; set; }
     }
 }
