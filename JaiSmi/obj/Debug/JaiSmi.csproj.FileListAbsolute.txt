@@ -51,3 +51,9 @@ F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.dll
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.pdb
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\AspNet.Identity.SQLite.dll
 F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\AspNet.Identity.SQLite.pdb
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\Microsoft.Web.Infrastructure.dll
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\AspNet.Identity.SQLite.dll.config
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\bin\System.Data.SQLite.dll.config
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.csprojAssemblyReference.cache
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.csproj.CoreCompileInputs.cache
+F:\Personal Projects\JaiSmi\JaiSmi\JaiSmi\obj\Debug\JaiSmi.csproj.CopyComplete

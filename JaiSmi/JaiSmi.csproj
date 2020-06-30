@@ -227,6 +227,16 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Icons\btn_google_dark_disabled_ios.svg" />
+    <Content Include="Images\Icons\btn_google_dark_focus_ios.svg" />
+    <Content Include="Images\Icons\btn_google_dark_normal_ios.svg" />
+    <Content Include="Images\Icons\btn_google_dark_pressed_ios.svg" />
+    <Content Include="Images\Icons\btn_google_signin_dark_focus_web%402x.png" />
+    <Content Include="Images\Icons\btn_google_signin_dark_normal_web%402x.png" />
+    <Content Include="Images\Icons\btn_google_signin_dark_pressed_web%402x.png" />
+    <Content Include="Images\Icons\btn_google_signin_light_focus_web%402x.png" />
+    <Content Include="Images\Icons\btn_google_signin_light_normal_web%402x.png" />
+    <Content Include="Images\Icons\btn_google_signin_light_pressed_web%402x.png" />
     <Content Include="Images\Shared\athirapally_cover.jpg" />
     <Content Include="Images\Shared\delhi_srinagar_cover.jpg" />
     <Content Include="Images\Shared\grass_190x190.jpg" />
@@ -845,6 +855,7 @@
     <Content Include="Scripts\ScriptsLib\jQuery\jquery-2.2.1.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\BlogOverviewModel.cshtml" />
+    <Content Include="Views\Shared\_GoogleLoginControl.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

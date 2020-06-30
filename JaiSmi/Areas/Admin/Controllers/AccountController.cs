@@ -40,6 +40,7 @@ namespace JaiSmi.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ExternalLogin(string provider, string returnUrl)
         {
+            Session["Workaround"] = 0;
             // Request a redirect to the external login provider
             return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
         }
@@ -356,13 +357,21 @@ namespace JaiSmi.Areas.Admin.Controllers
         public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
         {
             var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync();
+            
             if (loginInfo == null)
             {
                 return RedirectToAction("Login");
             }
 
+            var externalLoginConfirmationModel = new ExternalLoginConfirmationViewModel
+            {
+                Email = loginInfo.Email,
+                FullName = loginInfo.ExternalIdentity.Name
+            };
+
             // Sign in the user with this external login provider if the user already has a login
             var result = await SignInManager.ExternalSignInAsync(loginInfo, isPersistent: false);
+
             switch (result)
             {
                 case SignInStatus.Success:
@@ -378,7 +387,7 @@ namespace JaiSmi.Areas.Admin.Controllers
                     ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
                     //return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = loginInfo.Email });
 
-                    ActionResult returnResult = await ExternalLoginConfirmation(new ExternalLoginConfirmationViewModel { Email = loginInfo.Email }, "login");
+                    ActionResult returnResult = await ExternalLoginConfirmation(externalLoginConfirmationModel, "login");
                     return returnResult;
             }
         }
@@ -403,7 +412,7 @@ namespace JaiSmi.Areas.Admin.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

@@ -8,6 +8,7 @@ namespace JaiSmi.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        public string FullName { get; set; }
     }
 
     public class ExternalLoginListViewModel

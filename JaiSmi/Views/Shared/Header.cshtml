@@ -4,20 +4,23 @@
 
 <div class="header">
     <div class="header-links-wrapper">
-        <ul class="header-links">
-            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.Home ? "link-selected" : "")">
-                <a href="@Model.HomeUrl">Home</a>
-            </li>
-            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.Blog ? "link-selected" : "")">
-                <a href="@Model.BlogUrl">Blog</a>
-            </li>
-            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.TravelDiaries ? "link-selected" : "")">
-                <a href="@Model.TravelDiariesUrl">Travel Diaries</a>
-            </li>
-            <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.KidsCo ? "link-selected" : "")">
-                <a href="@Model.KidsCoUrl">Kid's Co</a>
-            </li>
-        </ul>
+        <div class="container">
+            <ul class="header-links">
+                <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.Home ? "link-selected" : "")">
+                    <a href="@Model.HomeUrl">Home</a>
+                </li>
+                <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.Blog ? "link-selected" : "")">
+                    <a href="@Model.BlogUrl">Blog</a>
+                </li>
+                <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.TravelDiaries ? "link-selected" : "")">
+                    <a href="@Model.TravelDiariesUrl">Travel Diaries</a>
+                </li>
+                <li class="@(Model.SelectedMenu ==  PublicEnums.Menu.KidsCo ? "link-selected" : "")">
+                    <a href="@Model.KidsCoUrl">Kid's Co</a>
+                </li>
+            </ul>
+            @{Html.RenderPartial("_GoogleLoginControl");}
+        </div>
     </div>
     <div class="main-menu-icon-container visible-xs-block">
         <span id="spanMainMenu" class="glyphicon glyphicon-menu-hamburger main-menu-icon"></span>
